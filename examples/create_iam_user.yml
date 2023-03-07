@@ -1,0 +1,39 @@
+name: Create IAM user example
+description: Create an IAM user called "testuser"
+
+metadata:
+  author: "Ghee Buttersnaps"
+  x_vectr_id: f287c3f6-db0e-4afb-98b7-d784e59fbece
+
+provider: aws
+
+mitre:
+  id: T1136.003
+  tactic: TA0003
+
+arguments:
+  iam_user: testuser
+
+permissions:
+- "iam:CreateUser"
+- "iam:DeleteUser"
+- "iam:ListUserPolicies"
+- "iam:ListAttachedUserPolicies"
+
+steps:
+- name: Create user
+  block:
+    phase: execution
+    type: inline
+    content: |
+      iam = sessions["default"].client("iam")
+      primitives.IAM.create_user(iam, user_name="{{ iam_user }}")
+      set_value("user", "{{ iam_user }}")
+
+- name: Delete user
+  block:
+    phase: cleanup
+    type: inline
+    content: |
+      iam = sessions["default"].client("iam")
+      primitives.IAM.delete_user(iam, user_name=get_value("user"))

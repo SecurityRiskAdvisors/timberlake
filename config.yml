@@ -1,0 +1,33 @@
+# aws profile names to generate sessions from
+# sessions for these profiles will use a special logger for API calls
+# default logfile location is ".timerlake.log" and controlled via "TIMBERLAKE_LOGFILE" env var
+# if "default" is not included then the first profile listed will become "default"
+#   inside the execution blocks
+profiles:
+- "default"
+- "attacker"
+# indicate where the test cases should be loaded from
+testcases:
+  # directory
+  directory: "/path"
+  # recurse into directory to find test cases or only use top-level files
+  recurse: "yes"
+# vectr infomation
+vectr:
+  # use vectr integrations?
+  # if false, all other keys in this section are optional
+  # if true, all other kets are mandatory
+  use_vectr: true
+  # vectr host
+  host: "https://example.com"
+  # api credentials for user
+  api_credentials:
+    access_key: "foo"
+    secret_key: "bar"
+  # name of assessment group to create/use
+  assessment: "assessment group"
+  # name of existing database
+  database: "databas"
+  # name of output file for ATTiRe log
+  attire_log: "attire.json"
+

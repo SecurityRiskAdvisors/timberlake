@@ -1,0 +1,51 @@
+# test case name
+name: name
+# test case description
+description: |
+  lorem ipsum or whatever
+# cloud service providers
+# one of "aws", "azure", "gcp", "other"
+# (currently only "aws" is processed)
+provider: aws
+# arbitrary metadata
+metadata:
+  # test case author name/identifier
+  author: name
+  # VECTR test case ID (used for ATTiRe log import)
+  x_vectr_id: guid
+# mitre mappings, if applicable
+mitre:
+  # (sub-)technique id
+  id: T1000
+  # tactic id
+  tactic: TA0001
+# shared arguments for steps section below
+arguments:
+  iam_user: baz
+# list of permissions required to perform API actions (purely descriptive)
+permissions:
+- "iam:FooBar"
+# steps to run for test case
+# each step execution is isolated from the others and also from other test cases
+steps:
+  # step name
+- name: Create IAM User
+  # block = commands configuration and code snippets
+  block:
+    # command phase (one of "execution", "setup", "cleanup")
+    # this can be used to control which steps to run - for example, run all setup phases for all cases
+    phase: execution
+    # type of content
+    #   inline = code block included in test case file
+    #     for inline, set content to python code
+    #   file = Python code stored in external file
+    #     for file, set content to file path
+    type: inline
+    # python code to execute
+    # content will be treated as a jinja2 template and rendered using the arguments from the arguments key above
+    content: |
+      iam = sessions["default"].client("iam")
+      iam.create_user(name="{{ iam_user }}")
+    # by default, exceptions will be treated as command failures
+    # set to true to ignore exceptions and treat as a success
+    ignore_errors: false

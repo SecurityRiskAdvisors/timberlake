@@ -1,0 +1,33 @@
+MITRE_TACTIC_NAME_TO_ID = {
+    "Reconnaissance": "TA0043",
+    "Resource Development": "TA0042",
+    "Initial Access": "TA0001",
+    "Execution": "TA0002",
+    "Persistence": "TA0003",
+    "Privilege Escalation": "TA0004",
+    "Defense Evasion": "TA0005",
+    "Credential Access": "TA0006",
+    "Discovery": "TA0007",
+    "Lateral Movement": "TA0008",
+    "Collection": "TA0009",
+    "Command and Control": "TA0011",
+    "Exfiltration": "TA0010",
+    "Impact": "TA0040",
+}
+
+MITRE_TACTIC_ID_TO_NAME = {
+    "TA0043": "Reconnaissance",
+    "TA0042": "Resource Development",
+    "TA0001": "Initial Access",
+    "TA0002": "Execution",
+    "TA0003": "Persistence",
+    "TA0004": "Privilege Escalation",
+    "TA0005": "Defense Evasion",
+    "TA0006": "Credential Access",
+    "TA0007": "Discovery",
+    "TA0008": "Lateral Movement",
+    "TA0009": "Collection",
+    "TA0011": "Command and Control",
+    "TA0010": "Exfiltration",
+    "TA0040": "Impact",
+}

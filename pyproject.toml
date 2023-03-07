@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "timberlake"
+version = "1.0.0"
+description = ""
+authors = ["2XXE <@2XXEformyshirt>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = "^5.4.1"
+Jinja2 = "^3.0.1"
+boto3 = "^1.17.111"
+desert = "^2020.11.18"
+marshmallow-enum = "^1.5.1"
+py-attire-schema = {git = "https://github.com/SecurityRiskAdvisors/py-attire-schema.git", rev = "main"}
+gql = {extras = ["all"], version = "^3.4.0"}
+pydantic = "^1.10.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+timberlake = "timberlake.cli:cli_main"
