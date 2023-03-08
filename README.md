@@ -1,6 +1,6 @@
 # AWS Attack Automation
 
-Timberlake is an AWS attack automation utility that can execute one or more test cases. You can read the release blog here: [link](TBD)
+Timberlake is an AWS attack automation utility that can execute one or more test cases. You can read the release blog here: [link](https://sra.io/blog/timberlake-aws-attack-automation/)
 
 Test cases are individual YAML documents that define the setup, execution, and cleanup steps for an attack procedure. These documents contain both metadata about the attack (e.g. MITRE mappings, permissions) as well as Python code for executing the attack.
 
