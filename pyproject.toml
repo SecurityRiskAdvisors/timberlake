@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "timberlake"
 version = "1.0.0"
-description = ""
-authors = ["2XXE <@2XXEformyshirt>"]
+description = "AWS attack automation utility"
+authors = ["2XXE <root@example.com>"]
+readme = "README.md"
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
