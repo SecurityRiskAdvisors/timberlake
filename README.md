@@ -21,6 +21,15 @@ Example use can be found in [examples](examples/)
 
 > pip install dist/*.whl
 
+### PyPI
+
+> pip install timberlake
+
+If you install from PyPI, you must also install the following dependencies:
+
+> pip install git+https://github.com/SecurityRiskAdvisors/py-attire-schema.git
+
+
 # Usage
 
 ```
