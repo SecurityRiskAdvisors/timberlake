@@ -81,7 +81,7 @@ The second block deletes the user created in the first step. Breaking down the c
 **Step 3 - Check logs**
 
 When looking at output from the command-line utility, only a basic true/false is reported for the success of a test case step execution. 
-For additional information, refer to the log file (default location is .pdcd.log).
+For additional information, refer to the log file (default location is .timberlake.log).
 
 Example log for above example:
 
