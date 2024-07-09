@@ -17,7 +17,7 @@ py-attire-schema = {git = "https://github.com/SecurityRiskAdvisors/py-attire-sch
 gql = {extras = ["all"], version = "^3.4.0"}
 pydantic = "^1.10.2"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 black = "^21.6b0"
 
 [build-system]
