@@ -12,7 +12,6 @@ Jinja2 = "^3.0.1"
 boto3 = "^1.17.111"
 desert = "^2020.11.18"
 marshmallow-enum = "^1.5.1"
-py-attire-schema = {git = "https://github.com/SecurityRiskAdvisors/py-attire-schema.git", rev = "main"}
 gql = {extras = ["all"], version = "^3.4.0"}
 pydantic = "^1.10.2"
 pyyaml = "^6.0.2"
