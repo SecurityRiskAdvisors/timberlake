@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "timberlake"
-version = "1.0.2"
+version = "1.0.3"
 description = "AWS attack automation utility"
 authors = ["2XXE <root@example.com>"]
 readme = "README.md"
